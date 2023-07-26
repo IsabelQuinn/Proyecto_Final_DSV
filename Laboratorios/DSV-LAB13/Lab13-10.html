@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo pseudoclasses</title>
+    <style>
+        /*campos requeridos vs opcionales*/
+        input:required{
+            border: 2px solid yellow;
+        }
+        input:optional{
+            border: 2px solid grey;
+        }
+        /*expresiones regulares validas e invalidas*/
+        input:valid{
+            background-color: green;
+            color: white;
+        }
+        input:invalid{
+            background-color: darkred;
+            color: white;
+        }
+        /*dentro o fuera de rango*/
+        input:in-range{
+            background-color: green;
+            color: white;
+        }
+        input:out-of-range{
+            background-color: darkred;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label >Nombre: <input type="text"required></label><br>
+        <label >Email: <input type="text"></label><br>
+        <label>Numero de Empleado: <input type="text" name="age" pattern="[0-9]+"></label><br>
+        <label>Edad: <input type="number" name="age" min="18" max="100"></label>
+    </form>
+</body>
+</html>

@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: #f0f0f0;
+  }
+
+header {
+    position: relative;
+    padding: 0px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.header-content {
+    position: relative;
+    padding-bottom: 69px;
+}
+.wave{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 170px;
+}
+.container-image{
+    width: 100%;
+    height: 0;
+    padding-bottom: 25%;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(245, 156, 219);
+} 
+.container-image img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0.7;
+} 
+.port_text{
+    position: absolute;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: .2em;
+    top: 45%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #f9dffa ;
+}
+header h1 {
+    font-size: 40px;
+    margin-top: 10px;
+    font-style: bold; 
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: .3em;
+}
+header h2{
+    font-family: 'Raleway', sans-serif;
+    letter-spacing:.3em;
+}
+
+main {
+    padding: 50px;   
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+div.card{
+    box-shadow: 0 4px 8px 0 rgba(18, 36, 83, 0.237), 0 6px 20px 0 rgba(61, 61, 128, 0.26);
+}
+.card {
+    padding: 12px;
+    box-shadow: 10px #4f97d5;
+}
+
+a.btn{
+    background-color: #6f14a7;
+    color: #fff;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Aplicando Hash de tipo SHA-256 para Imágenes y Archivos en general
+    </title>
+    <script src="sha256.js"></script>
+    <script>
+      manejarArchivos = (files) => {
+        console.log(files[0]);
+        //'Files' será una matriz de archivos, incluso si solo se selecciona un archivo
+        Object.keys(files).forEach((item, index) => {
+          const file = files[index];
+          //inicia una nueva instancia de 'FileReader'
+          const reader = new FileReader();
+          //proporciona 'onload callback' para esta instancia de 'FileReader'
+          //esto se llama una vez reader.readAsArrayBuffer() esté terminado
+          reader.onload = () => {
+            const fileResult = reader.result;
+            crypto.subtle.digest("SHA-256", fileResult).then((hash) => {
+              var sha256result = hex(hash);
+              //esto debería contener su valor hash sha-256
+              console.log(sha256result);
+              document.getElementById("result").innerHTML = sha256result;
+            });
+          };
+          //llamar a 'reader.readAsArrayBuffer' y proporcionar un 'file', debería activar la devolución de llamada anterior
+          //tan pronto como readAsArrayBuffer esté completado
+          reader.readAsArrayBuffer(file);
+        });
+      };
+      function hex(buffer) {
+        var hexCodes = [];
+        var view = new DataView(buffer);
+
+        for (var i = 0; i < view.byteLength; i += 4) {
+          //El uso de 'getUint32' reduce la cantidad de iteraciones necesarias (procesamos 4 bytes cada vez)
+          var value = view.getUint32(i);
+          //'toString(16)' dará la representación hexadecimal del número sin padding
+          var stringValue = value.toString(16);
+          //Usamos concatenación y corte para relleno (padding)
+          var padding = "00000000";
+          var paddedValue = (padding + stringValue).slice(-padding.length);
+          hexCodes.push(paddedValue);
+        }
+        //Une todas las cadenas hexadecimales en una
+        return hexCodes.join("");
+      }
+    </script>
+  </head>
+
+  <body>
+    <label
+      ><input type="file" onchange="manejarArchivos(this.files)" /><span
+        title="Seleccionar Archivo"
+      ></span
+    ></label>
+
+    <div>
+      <p id="result">Ninguna imagen ha sido seleccionada</p>
+    </div>
+  </body>
+</html>

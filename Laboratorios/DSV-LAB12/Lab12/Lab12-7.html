@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Efectos de Transicion</title>
+
+        <style>
+            div.swapnill{
+                width: 20px;
+                height: 20px;
+                margin: 20px auto;
+            }
+
+            div.swapnil div.estrella img
+            {
+                width: 20px;
+                height: 20px;
+                color: #fff;
+                padding: 10px;
+                border-radius: 5px;
+                margin-left: 0;
+                transition: 3s linear;
+            }
+
+            div.swapnil:hover div.estrella img
+            {
+                width: 240px;
+                height: 220px;
+                transform: rotate(360deg);
+            }
+
+        </style>
+    </head>
+    <body>
+        <p>Coloca el cursor sobre el objeto para verlo en accion</p>
+        <div class="swapnil">
+            <div class="estrella">
+                <img src="/imgs_transf2d/star.png" width="20" height="20"/>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(165,96,236,1) 100%);
+}
+
+nav {
+  z-index: 2;
+  font-family: "Raleway", sans-serif;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 95%
+  );
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  height: 75px;
+}
+.container {
+  display: block;
+  font-family: "Raleway", sans-serif;
+  padding: 20px;
+  margin-top: 50px;
+  text-align: center;
+  color: #fff;
+}
+.arrow svg {
+  margin-right: 50px;
+}
+.title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+audio {
+  margin-bottom: 20px; /* Espacio entre los audios */
+  display: block; /* Asegura que los audios ocupen todo el ancho disponible */
+  border-radius: 20px;
+  width: 380px;
+}
+.audio-container {
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  margin-top: 50px;
+}
+/* Estilo para pantallas con ancho igual o menor a 1024px */
+@media screen and (max-width: 1024px) {
+  audio {
+    width: 100%; /* Los audios ocupan todo el ancho disponible */
+  }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Trans 2D</title>
+        <style>
+            #div_notranslate
+            {
+                float: left;
+                width: 100px;
+                height: 100px;
+                background-color: rgba(255,0,0,0.5);
+                border: 1px solid #000000;
+                opacity: 0.4;
+                filter: alpha(opacity=40);
+            }
+
+            #div_translate
+            {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background-color: rgba(255,0,0,0.5);
+                border: 1px solid #000000;
+                transform: translate(40px, 40px);
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div_notranslate">original</div>
+        <div id="div_translate">Despues del metodo translate</div>
+    </body>
+</html>

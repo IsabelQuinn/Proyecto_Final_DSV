@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo bordes</title>
+</head>
+<style>
+    #border_radius{
+        border: 2px solid;
+        font-size: 14px;
+        color: #ffffff;
+        font-weight: bold;
+        padding: 10px;
+        background: #6AAFCF;
+        border-radius: 25px;
+    }
+    #box_shadow{
+        font-size: 14px;
+        color: #ffffff;
+        font-weight: bold;
+        padding: 10px;
+        background: #6AAFCF;
+        box-shadow: 15px 15px 5px #888245;        
+    }
+    #border_image{
+        border-width: 15px;
+        border-image: url(media/border.png) 30 30 round;
+    }
+</style>
+<body>
+    <div id="border_radius">
+        con la ayuda de las propiedades de radio de borde, podemos hacer que los bordes de las esquinas redondeadas..
+    </div>
+    <div id="box_shadow">
+        con la ayuda de las propiedades box-shadow, podemos crear la sombra para un cuadro
+    </div>
+    <div id="border_image">
+        puedes ver el borde personalizado. Esto podria ser en formato *png o *jpg
+    </div>
+    
+</body>
+</html>

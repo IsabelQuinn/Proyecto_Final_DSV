@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de pseudoclase</title>
+    <style>
+        /*Hacer foco sobre input*/
+        form:focus-within{
+            background: yellow;
+        }
+        /*colocar el raton sobre el enlace*/
+        a:hover{
+            background-color: cyan;
+            padding: 2px;
+        }
+        /*Mover el raton sobre el div y resalta todos los enlaces que contiene*/
+        div:hover{
+            background-color: steelblue;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <label>Name:<input type="text" name="" id=""></label><br>
+        <label>Enail:<input type="text" name="" id=""></label><br><br>
+        <a href="https//www.google.com">Enlace 2</a>regular<br>
+        <div id="div_ejemplo"><a href="https//www.google.com">Enlace 3</a> En un div</div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prueba de la etiqueta CANVAS en HTML5</title>
+    </head>
+    <body>
+        <canvas id="myCanvas" width="350" height="350"></canvas>
+    
+        <canvas id="cuadrado" width="350" height="350" style="border: 1px solid black">
+            Tu Navegador no soporta canvas
+        </canvas>
+    
+        <canvas id="circulo" width="120" height="120" style="border: 1px solid">
+            Tu Navegador no soporta canvas
+        </canvas>
+    
+        <canvas id="triangulo" width="320" height="200" style="border: 0px solid">
+            Tu Navegador no soporta canvas
+        </canvas>
+    
+        <canvas id="linea" width="320" height="200" style="border: 0px solid">
+            Tu Navegador no soporta canvas
+        </canvas>
+
+        <canvas id="texto1" width="220" height="100" style="border: 0px solid">
+            Tu navegador no soporta canvas
+        </canvas>
+    
+        <canvas id="texto2" width="220" height="100" style="border: 0px solid">
+            Tu navegador no soporta canvas
+        </canvas>
+    
+        <script type="text/javascript">
+            var canvas = document.getElementById('myCanvas');
+            var ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#FF0000';
+            ctx.fillRect(0, 0, 80, 100);
+        </script>
+    
+        <script type="text/javascript">
+            var canvasCuadrado = document.getElementById('cuadrado');
+            var ctxCuadrado = canvasCuadrado.getContext('2d');
+            ctxCuadrado.fillStyle = 'blue';
+            ctxCuadrado.fillRect(10, 10, 100, 50);
+        </script>
+    
+        <script type="text/javascript">
+            var canvasCirculo = document.getElementById('circulo');
+            var ctxCirculo = canvasCirculo.getContext('2d');
+            ctxCirculo.fillStyle="red";
+            ctxCirculo.arc(60, 60, 50, 0, Math.PI * 2, true);
+            ctxCirculo.closePath();
+            ctxCirculo.fill();
+        </script>
+    
+        <script type="text/javascript">
+            var canvasTriangulo = document.getElementById('triangulo');
+            var ctxTriangulo = canvasTriangulo.getContext('2d');
+            ctxTriangulo.beginPath();
+            ctxTriangulo.moveTo(300, 200);
+            ctxTriangulo.lineTo(200, 150);
+            ctxTriangulo.lineTo(200, 0);
+            ctxTriangulo.closePath();
+            ctxTriangulo.stroke();
+        </script>
+            
+        <script type="text/javascript">
+            var canvasLinea = document.getElementById('linea');
+            var ctxLinea = canvasLinea.getContext('2d');
+            ctxLinea.moveTo(20, 10);
+            ctxLinea.lineTo(130, 100);
+            ctxLinea.lineWidth = 7;
+            ctxLinea.strokeStyle = "blue";
+            ctxLinea.stroke();
+        </script>    
+
+        <script type="text/javascript">
+            var canvasTexto1 = document.getElementById('texto1');
+            var ctxTexto1 = canvasTexto1.getContext('2d');
+            ctxTexto1.font = "30px Arial";
+            ctxTexto1.fillText("Hello World", 10, 50);
+        </script>  
+
+    <script type="text/javascript">
+            var canvasTexto2 = document.getElementById('texto2');
+            var ctxTexto2 = canvasTexto2.getContext('2d');
+            ctxTexto2.font = "30px Arial";
+            ctxTexto2.strokeText("Hello World", 10, 50);
+    </script>
+</body>
+</html>

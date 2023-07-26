@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de pseudoclasses</title>
+    <style>
+        input:checked{
+            height: 20px;
+            width: 20px;
+        }
+        input:enabled{
+            background-color: blue;
+        }
+        input:disabled{
+            background-color: grey;
+            cursor: not-allowed;
+        }
+        input:read-only{
+            background-color: darkred;
+            color: white;
+        }
+        input:read-write{
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for="">Name: <input type="text"></label><br>
+        <label for="">Email; <input type="text" value="test@test.com" readonly></label><br><br>
+        <input type="checkbox" name="android" id="android" checked>
+        <label for="android">Android</label>
+        <input type="checkbox" name="ios" id="ios">
+        <label for="ios">iOS</label>
+        <button>Boton activado</button>
+        <button disabled="disabled">Boton desactivado</button>
+        <input type="text" placeholder="usuario@gmail.com">
+    </form>
+</body>
+</html>

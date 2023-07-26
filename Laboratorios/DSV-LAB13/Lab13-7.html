@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz de usuario ajustable por Resize Property</title>
+    <style>
+       #div_both{
+        border: 1px solid green;
+        margin-top: 20px;
+        padding: 15px 30px;
+        width:250px;
+        resize: both;
+        overflow: auto;
+       }
+       #div_horizontal{
+        border: 1px solid green;
+        margin-top: 20px;
+        padding: 15px 30px;
+        width: 250px;
+        resize: horizontal;
+        overflow: auto;
+        }
+        #div_vertical {
+            border: 1px solid red;
+            margin-top: 20px;
+            padding: 15px 30px;
+            width: 250px;
+            resize: vertical;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="div_both">Este div es estirable desde ambas esquinas (horizontal y vertical)</div>
+    <div id="div_horizontal">Este div es estirable desde la esquina horizontal</div>
+    <div id="div_vertical">Este div es estirable desde esquina vertical</div>
+</body>
+</html>

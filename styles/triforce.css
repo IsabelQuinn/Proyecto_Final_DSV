@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  background-color: #000;
+  image-rendering: pixelated;
+}
+
+.triforce-pivot {
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  z-index: 0;
+  animation: spin 45s linear infinite;
+}
+
+.triforce-triangle-container {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  z-index: 10;
+  top: -50px;
+  right: -50px;
+}
+
+.triforce-triangle {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid gold;
+}
+
+.top {
+  position: absolute;
+  left: 25px;
+}
+
+.left {
+  position: absolute;
+  left: 0px;
+  top: 50px;
+}
+
+.right {
+  position: absolute;
+  right: 0px;
+  top: 50px;
+}
+
+#link {
+  display: inline-block;
+  width: 32px; /*Ancho de la ventana para mostrar un solo fotograma */
+  height: 35px; /* Altura de la ventana para mostrar un solo fotograma */
+  margin: auto;
+  background: url("/assets/link_sprite.png") repeat-x;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: animateLink 2s steps(4) infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
+@keyframes animateLink {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: -136px;
+  }
+}

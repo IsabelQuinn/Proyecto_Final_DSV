@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(165,96,236,1) 100%);
+    animation: bgAnimation 20s linear infinite;
+}
+
+nav {
+  font-family: "Raleway", sans-serif;
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 95%
+  );
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px;
+  height: 75px;
+  z-index: 2;
+}
+
+.arrow svg {
+  margin-right: 50px;
+}
+.title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+  padding: 20px;
+  text-align: center;
+}
+.dropdown{
+  background-color: #e9639b ;
+  transition: 0.2s ease;
+}
+
+.dropdown:hover{
+  box-shadow: -0px -0px 30px rgba(240, 73, 145, 0.826);
+}
+.dropdown-menu{
+  background-color: #73344e;
+}
+@media (max-width: 768px) {
+  nav {
+    height: 100px; /* Altura más alta para el nav en pantallas móviles */
+    align-items: center; /* Centrar los elementos verticalmente en el nav */
+    padding: 10px 20px; /* Ajustar el padding para un mejor espaciado en pantallas móviles */
+  }
+
+  .arrow svg {
+    margin-right: 20px; /* Reducir el margen para un mejor espaciado en pantallas móviles */
+  }
+
+  .title {
+    font-size: 24px; /* Reducir el tamaño del título en pantallas móviles */
+  }
+}
+@media (min-width: 768px) {
+  .center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh; /* Ajusta la altura mínima para centrar verticalmente */
+  }
+}
+/* Animación para el movimiento del fondo del body */
+@keyframes bgAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    height: 100px;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .arrow svg {
+    margin-right: 20px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}
